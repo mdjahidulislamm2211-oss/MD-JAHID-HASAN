@@ -1,0 +1,365 @@
+{
+  "products": [
+    {
+      "id": "prod_wireless_power_dock",
+      "sku": "VM-TEC-071",
+      "slug": "orbit-3-in-1-magnetic-wireless-charging-stand",
+      "name": "Orbit 3-in-1 Magnetic Fast-Charging Station",
+      "description": "Weighted brushed aerospace alloy stand that simultaneously charges your phone, smartwatch, and wireless earbuds with MagSafe compatibility. Features clean floating angle adjustment and intelligent thermal management.",
+      "price": 129,
+      "salePrice": 109,
+      "currency": "USD",
+      "category": "Workspace & Tech",
+      "subcategory": "Charging & Power",
+      "brand": "Orbit Lab",
+      "tags": [
+        "MagSafe",
+        "Charging Stand",
+        "Tech",
+        "Minimalist"
+      ],
+      "image": "/src/assets/images/product_matte_headphones_1792332921020.jpg",
+      "gallery": [
+        "/src/assets/images/product_matte_headphones_1792332921020.jpg"
+      ],
+      "rating": 4.8,
+      "reviewCount": 205,
+      "inStock": true,
+      "affiliateNetwork": "BestBuy Affiliate",
+      "affiliateUrl": "https://www.bestbuy.com/site/orbit-3in1-magsafe/6543210.p?skuId=6543210&ref=veritas",
+      "specifications": [
+        {
+          "key": "Fast Wireless Output",
+          "value": "15W MagSafe Phone + 5W Watch + 5W Buds"
+        },
+        {
+          "key": "Materials",
+          "value": "CNC Anodized Zinc & Silicone Cushion"
+        },
+        {
+          "key": "Input",
+          "value": "USB-C PD 35W Included"
+        },
+        {
+          "key": "Safety",
+          "value": "FOD, OVP, and Temperature Protection"
+        }
+      ],
+      "isFeatured": false,
+      "isBestSeller": false,
+      "isNewArrival": true,
+      "status": "published",
+      "seoTitle": "Orbit 3-in-1 MagSafe Charging Stand Review & Deals",
+      "seoDescription": "High-speed wireless power station for bedside and desk setups. Explore verified merchant affiliate links.",
+      "createdAt": "2026-03-12T16:00:00.000Z",
+      "updatedAt": "2026-03-17T11:20:00.000Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat_audio",
+      "name": "Audio & Acoustics",
+      "slug": "audio-acoustics",
+      "description": "Reference headphones, spatial IEMs, and studio listening gear.",
+      "image": "/src/assets/images/product_matte_headphones_1792332921020.jpg",
+      "order": 1
+    },
+    {
+      "id": "cat_workspace",
+      "name": "Workspace & Tech",
+      "slug": "workspace-tech",
+      "description": "Ergonomic mechanical keyboards, desk pads, and charging stations.",
+      "image": "/src/assets/images/product_craft_keyboard_1792332922449.jpg",
+      "order": 2
+    },
+    {
+      "id": "cat_home",
+      "name": "Home & Living",
+      "slug": "home-living",
+      "description": "Artisanal kitchenware, handcrafted ceramics, and timeless design pieces.",
+      "image": "/src/assets/images/product_ceramic_pourover_1792332922270.jpg",
+      "order": 3
+    },
+    {
+      "id": "cat_travel",
+      "name": "Travel & Carry",
+      "slug": "travel-carry",
+      "description": "Heritage leather folios, modular EDC items, and durable luggage.",
+      "image": "/src/assets/images/hero_curated_lifestyle_1792332920466.jpg",
+      "order": 4
+    }
+  ],
+  "siteSettings": {
+    "storeName": "GADZONIC",
+    "tagline": "Next-Gen Tech, Smart Gadgets & Verified Marketplace Drops",
+    "logo": "/src/assets/images/gadzonic_logo_1792334338384.jpg",
+    "announcement": {
+      "enabled": true,
+      "text": "⚡ FLASH TECH DROPS: Verified Spring 2026 Deals on Wireless Audio, Custom Keyboards & Desk Stations.",
+      "link": "/affiliate-disclosure"
+    },
+    "hero": {
+      "title": "Next-Gen Tech & High-Performance Gadgets",
+      "subtitle": "We benchmark, stress-test, and catalog premier mechanical desk gear, reference acoustics, and smart peripherals from verified merchants with zero markup.",
+      "badge": "Spring 2026 Verified Tech Drops",
+      "ctaText": "Explore Tech Deals",
+      "ctaLink": "#catalog",
+      "secondaryCtaText": "Affiliate Transparency",
+      "secondaryCtaLink": "/affiliate-disclosure",
+      "bannerImage": "/src/assets/images/hero_curated_lifestyle_1792332920466.jpg"
+    },
+    "contact": {
+      "email": "support@gadzonic.com",
+      "supportHours": "Monday – Saturday, 8:00 AM – 8:00 PM EST",
+      "address": "GADZONIC Tech Media & Marketplace Labs, Silicon Alley, NY 10010"
+    },
+    "socialLinks": {
+      "twitter": "https://x.com/gadzonic",
+      "instagram": "https://instagram.com/gadzonic",
+      "github": "https://github.com/gadzonic",
+      "youtube": "https://youtube.com/@gadzonic"
+    },
+    "colors": {
+      "primary": "#0b0f19",
+      "accent": "#06b6d4"
+    },
+    "footer": {
+      "aboutText": "GADZONIC is an independent editorial tech affiliate marketplace. We review and catalog next-generation gadgets, audio gear, and workstation tools, directing shoppers to authorized partner merchants without retail markup.",
+      "copyright": "© 2026 GADZONIC Inc. All rights reserved.",
+      "affiliateNoticeShort": "GADZONIC is a participant in affiliate advertising programs. When you click links to various merchants on this site and make a purchase, this can result in this site earning a commission at no additional cost to you."
+    }
+  },
+  "pages": {
+    "affiliate-disclosure": {
+      "slug": "affiliate-disclosure",
+      "title": "Affiliate Disclosure",
+      "subtitle": "Our Commitment to Complete Transparency & Editorial Independence",
+      "content": "\n### Transparency First\nVeritas Market operates as an independent curated marketplace directory. In compliance with the Federal Trade Commission (FTC) guidelines and global consumer standards, we provide full disclosure regarding how our website is monetized.\n\n### How We Earn Revenue\nWhen you click on a product link or \"Buy Now\" button on Veritas Market, you are redirected to an external third-party merchant (such as Amazon, Best Buy, Nordstrom, ShareASale partners, or direct brand storefronts). If you complete a qualifying purchase on the merchant's site, we may earn an affiliate commission.\n\n### Zero Cost to You\n**The price you pay on the merchant platform is identical whether you use our link or not.** In many cases, our editorial team secures exclusive partner discount codes that actually reduce your checkout price.\n\n### Editorial Independence\nWe never accept payment in exchange for a positive product review. Every item featured in our catalog is selected by our editorial team based on build quality, design integrity, verified customer satisfaction, and real utility. Products are archived or removed if vendor quality or delivery standards decline.\n\n### External Merchant Transactions\nVeritas Market does not collect credit card payments, hold physical inventory, or handle delivery logistics. All orders, shipping, warranties, returns, and refunds are executed solely by the respective third-party merchant under their terms of service.\n        ",
+      "updatedAt": "2026-03-10T10:00:00.000Z"
+    },
+    "privacy": {
+      "slug": "privacy",
+      "title": "Privacy Policy",
+      "subtitle": "How Veritas Market Handles Data with Respect and Minimal Footprint",
+      "content": "\n### Overview\nYour privacy is foundational to our philosophy. Veritas Market collects only minimal technical data necessary to operate our affiliate discovery engine and maintain site security.\n\n### Data We Collect\n- **Anonymous Session Analytics**: We record anonymized click and cart interaction events to measure which products our readers find valuable. No personally identifiable information (PII) is attached to these logs.\n- **Contact Inquiries**: When you submit a message through our Contact Us page, your name and email address are used solely to reply to your inquiry.\n- **Affiliate Outbound Referrals**: When you click an affiliate link, a standard tracking identifier is passed to the destination merchant so they can attribute the referral.\n\n### What We Do NOT Collect\nWe do not store credit card numbers, billing addresses, or bank details. We do not sell your personal information to third-party data brokers.\n\n### Cookies & Local Storage\nWe use browser local storage to persist your local shopping cart and user preferences across page visits. You can clear this storage at any time via your browser settings.\n        ",
+      "updatedAt": "2026-03-01T10:00:00.000Z"
+    },
+    "terms": {
+      "slug": "terms",
+      "title": "Terms and Conditions",
+      "subtitle": "Terms Governing Your Use of the Veritas Market Platform",
+      "content": "\n### Acceptance of Terms\nBy accessing or using Veritas Market, you agree to be bound by these Terms and Conditions and our Affiliate Disclosure.\n\n### Nature of the Service\nVeritas Market provides informational product showcases, editorial reviews, and outbound links to third-party merchant platforms. We are not a seller of record, manufacturer, or shipping provider for third-party products.\n\n### Third-Party Websites & Policies\nWhen you click an outbound link to visit an external merchant, you leave Veritas Market. We are not liable for any merchant conduct, stock discrepancies, shipping delays, or pricing adjustments on third-party sites.\n\n### Intellectual Property\nAll original editorial content, photography, branding, and curation on this website are the intellectual property of Veritas Market Inc. Third-party brand names, trademarks, and logos belong to their respective holders and are used for identification purposes only.\n        ",
+      "updatedAt": "2026-03-01T10:00:00.000Z"
+    },
+    "returns": {
+      "slug": "returns",
+      "title": "Returns & Refund Information",
+      "subtitle": "Understanding Return Policies for Affiliate Purchases",
+      "content": "\n### Merchant-Handled Returns\nBecause Veritas Market is an editorial affiliate directory and not a direct retailer, **all orders, payments, shipments, and customer service inquiries are processed directly by the third-party merchant where you finalize your purchase** (such as Amazon, Best Buy, Nordstrom, or individual brand sites).\n\n### How to Initiate a Return or Refund\n1. Locate your order confirmation email sent by the merchant where you completed the checkout.\n2. Sign in to your customer account on the merchant's official website.\n3. Visit their \"Order History\" or \"Returns & Orders\" section.\n4. Follow the merchant's specified return protocol.\n\n### Defective or Damaged Goods\nIf an item arrives damaged or does not match specifications, please contact the merchant's customer support directly. They hold the inventory and have the authority to issue replacements or process refunds.\n\nIf you ever encounter an untrustworthy merchant linked on our site, please let our editorial team know via our Contact page so we can investigate and remove the listing if necessary.\n        ",
+      "updatedAt": "2026-03-05T10:00:00.000Z"
+    },
+    "about": {
+      "slug": "about",
+      "title": "About Veritas Market",
+      "subtitle": "Our Mission: Cutting Through E-Commerce Noise with Honesty",
+      "content": "\n### Why We Built Veritas Market\nThe internet is flooded with dropshipped clones, paid infomercials, and confusing marketplace listings. Finding truly well-made products has never been harder.\n\nVeritas Market was founded by designers, engineers, and audio enthusiasts with one clear mandate: curate only items built with durable materials, honest engineering, and timeless aesthetics.\n\n### How We Curate\n1. **Material First**: We prioritize CNC machined metals, vegetable-tanned leather, solid wood, and repairable electronics over cheap plastics.\n2. **Real Testing**: We verify manufacturer specifications, real acoustic frequency responses, and long-term durability.\n3. **Price Integrity**: We link exclusively to verified, authorized retailers with fair market prices and legitimate warranty coverage.\n        ",
+      "updatedAt": "2026-03-12T10:00:00.000Z"
+    },
+    "faq": {
+      "slug": "faq",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Common Questions About Shopping, Affiliate Links, and Our Process",
+      "content": "\n### Does Veritas Market charge extra for products?\nNo. The prices displayed match or beat standard retailer prices. We earn our commission directly from the partner merchant, not from you.\n\n### What happens when I click \"Buy Now\"?\nYou are securely redirected to the authorized merchant's official product page. Your transaction occurs directly on the merchant's secure servers.\n\n### Can I buy multiple items in one checkout?\nBecause different items may originate from different partner retailers (e.g., one from Amazon and another from Nordstrom), items in your Veritas Market cart are purchased directly through their respective merchants. Our cart allows you to organize your wishlist and visit each merchant with one click.\n\n### How do I track my order?\nYour order tracking number and shipment updates will be sent directly to your email by the merchant where you finalized the purchase.\n        ",
+      "updatedAt": "2026-03-14T10:00:00.000Z"
+    }
+  },
+  "testimonials": [
+    {
+      "id": "test_1",
+      "author": "Elena Rostova",
+      "role": "Industrial Designer",
+      "company": "Form Studio Berlin",
+      "content": "Veritas Market is my primary source for honest workspace gear. The specifications are accurate, and I love that every merchant link directs to verified stock without retail markup.",
+      "rating": 5,
+      "verified": true
+    },
+    {
+      "id": "test_2",
+      "author": "Marcus Vance",
+      "role": "Sound Engineer & Producer",
+      "company": "Vance Audio Labs",
+      "content": "The acoustic breakdown on the Veritas A9 headphones was spot on. Seamless redirect to Amazon with verified warranty coverage. A breath of fresh air in e-commerce.",
+      "rating": 5,
+      "verified": true
+    },
+    {
+      "id": "test_3",
+      "author": "Clara Chen",
+      "role": "Architectural Photographer",
+      "content": "I appreciate the clean, clutter-free store experience. No intrusive popups or countdown timers—just well-crafted goods and transparent affiliate disclosure.",
+      "rating": 5,
+      "verified": true
+    }
+  ],
+  "affiliateClicks": [
+    {
+      "productId": "prod_wireless_power_dock",
+      "productName": "Orbit 3-in-1 Magnetic Fast-Charging Station",
+      "price": 109,
+      "affiliateNetwork": "BestBuy Affiliate",
+      "affiliateUrl": "https://www.bestbuy.com/site/orbit-3in1-magsafe/6543210.p?skuId=6543210&ref=veritas",
+      "destinationHost": "www.bestbuy.com",
+      "source": "pdp_buy_now",
+      "sessionId": "sess_1792344724492_c44p3in",
+      "id": "clk_1792334026660_3pl21",
+      "timestamp": "2026-10-18T14:33:46.660Z"
+    },
+    {
+      "productId": "prod_audiophile_headphones",
+      "productName": "Veritas A9 Studio Wireless Reference Headphones",
+      "price": 299,
+      "affiliateNetwork": "Amazon Associates",
+      "affiliateUrl": "https://www.amazon.com/dp/B08XJ8P3KM?tag=veritasmkt-20",
+      "destinationHost": "www.amazon.com",
+      "source": "card_buy_now",
+      "sessionId": "anon",
+      "id": "clk_1792333624730_dqc3d",
+      "timestamp": "2026-10-18T14:27:04.730Z"
+    }
+  ],
+  "cartEvents": [
+    {
+      "eventType": "add_to_cart",
+      "productId": "prod_wireless_power_dock",
+      "productName": "Orbit 3-in-1 Magnetic Fast-Charging Station",
+      "price": 109,
+      "quantity": 1,
+      "sessionId": "sess_1792344724492_c44p3in",
+      "id": "cart_1792334022909_tvlor",
+      "timestamp": "2026-10-18T14:33:42.909Z"
+    },
+    {
+      "eventType": "add_to_cart",
+      "productId": "prod_wireless_power_dock",
+      "productName": "Orbit 3-in-1 Magnetic Fast-Charging Station",
+      "price": 109,
+      "quantity": 1,
+      "sessionId": "sess_1792344724492_c44p3in",
+      "id": "cart_1792334018582_1de9j",
+      "timestamp": "2026-10-18T14:33:38.582Z"
+    },
+    {
+      "eventType": "add_to_cart",
+      "productId": "prod_wireless_power_dock",
+      "productName": "Orbit 3-in-1 Magnetic Fast-Charging Station",
+      "price": 109,
+      "quantity": 1,
+      "sessionId": "sess_1792344724492_c44p3in",
+      "id": "cart_1792334006040_s4582",
+      "timestamp": "2026-10-18T14:33:26.040Z"
+    }
+  ],
+  "contactMessages": [],
+  "emailSettings": {
+    "recipientEmail": "md.jahidulislamm2211@gmail.com",
+    "notifyOnAddToCart": true,
+    "notifyOnBuyNow": true,
+    "notifyOnCartMerchantClick": true,
+    "notifyOnContactMessage": true,
+    "provider": "system_queue",
+    "apiKeyConfigured": false
+  },
+  "notificationLogs": [
+    {
+      "type": "buy_now",
+      "subject": "Outbound Affiliate Click: Orbit 3-in-1 Magnetic Fast-Charging Station",
+      "recipient": "editorial@veritasmarket.com",
+      "status": "mock_logged",
+      "details": {
+        "note": "API key not configured in environment (RESEND_API_KEY). Event saved in database notification queue for review.",
+        "type": "buy_now",
+        "subject": "Outbound Affiliate Click: Orbit 3-in-1 Magnetic Fast-Charging Station",
+        "productName": "Orbit 3-in-1 Magnetic Fast-Charging Station",
+        "productId": "VM-TEC-071",
+        "price": 109,
+        "affiliateNetwork": "BestBuy Affiliate",
+        "destinationHost": "www.bestbuy.com",
+        "sessionId": "sess_1792344724492_c44p3in",
+        "productUrl": "https://ais-dev-3p6ex5mli6subwvlv2yuny-244070564107.asia-east1.run.app/product/orbit-3-in-1-magnetic-wireless-charging-stand"
+      },
+      "id": "ntf_1792334026660_ceju0",
+      "timestamp": "2026-10-18T14:33:46.660Z"
+    },
+    {
+      "type": "add_to_cart",
+      "subject": "Cart Activity: Added Orbit 3-in-1 Magnetic Fast-Charging Station",
+      "recipient": "editorial@veritasmarket.com",
+      "status": "mock_logged",
+      "details": {
+        "note": "API key not configured in environment (RESEND_API_KEY). Event saved in database notification queue for review.",
+        "type": "add_to_cart",
+        "subject": "Cart Activity: Added Orbit 3-in-1 Magnetic Fast-Charging Station",
+        "productName": "Orbit 3-in-1 Magnetic Fast-Charging Station",
+        "productId": "VM-TEC-071",
+        "price": 109,
+        "quantity": 1,
+        "affiliateNetwork": "BestBuy Affiliate",
+        "sessionId": "sess_1792344724492_c44p3in",
+        "productUrl": "https://ais-dev-3p6ex5mli6subwvlv2yuny-244070564107.asia-east1.run.app/product/orbit-3-in-1-magnetic-wireless-charging-stand"
+      },
+      "id": "ntf_1792334022909_2ysb1",
+      "timestamp": "2026-10-18T14:33:42.909Z"
+    },
+    {
+      "type": "add_to_cart",
+      "subject": "Cart Activity: Added Orbit 3-in-1 Magnetic Fast-Charging Station",
+      "recipient": "editorial@veritasmarket.com",
+      "status": "mock_logged",
+      "details": {
+        "note": "API key not configured in environment (RESEND_API_KEY). Event saved in database notification queue for review.",
+        "type": "add_to_cart",
+        "subject": "Cart Activity: Added Orbit 3-in-1 Magnetic Fast-Charging Station",
+        "productName": "Orbit 3-in-1 Magnetic Fast-Charging Station",
+        "productId": "VM-TEC-071",
+        "price": 109,
+        "quantity": 1,
+        "affiliateNetwork": "BestBuy Affiliate",
+        "sessionId": "sess_1792344724492_c44p3in",
+        "productUrl": "https://ais-dev-3p6ex5mli6subwvlv2yuny-244070564107.asia-east1.run.app/product/orbit-3-in-1-magnetic-wireless-charging-stand"
+      },
+      "id": "ntf_1792334006043_f8avl",
+      "timestamp": "2026-10-18T14:33:26.043Z"
+    },
+    {
+      "type": "buy_now",
+      "subject": "Outbound Affiliate Click: Veritas A9 Studio Wireless Reference Headphones",
+      "recipient": "editorial@veritasmarket.com",
+      "status": "mock_logged",
+      "details": {
+        "note": "API key not configured in environment (RESEND_API_KEY). Event saved in database notification queue for review.",
+        "type": "buy_now",
+        "subject": "Outbound Affiliate Click: Veritas A9 Studio Wireless Reference Headphones",
+        "productName": "Veritas A9 Studio Wireless Reference Headphones",
+        "productId": "VM-AUD-010",
+        "price": 299,
+        "affiliateNetwork": "Amazon Associates",
+        "destinationHost": "www.amazon.com",
+        "sessionId": "anon",
+        "productUrl": "https://ais-dev-3p6ex5mli6subwvlv2yuny-244070564107.asia-east1.run.app/product/veritas-a9-wireless-audiophile-headphones"
+      },
+      "id": "ntf_1792333624732_r90za",
+      "timestamp": "2026-10-18T14:27:04.732Z"
+    }
+  ],
+  "adminUsers": [
+    {
+      "id": "admin_primary_01",
+      "email": "admin@veritasmarket.com",
+      "role": "admin",
+      "passwordHash": "ed312899a8983409e9675665e1568353c828c0a6e92cd341567e73f101b21e622e138e2e78dd9898571fc508c9133cf210f5226ff88f05f23947b0488932bfca",
+      "salt": "ca8218c6b3f997237e9d44fe4b224dd9",
+      "lastLogin": "2026-10-18T14:48:43.289Z"
+    }
+  ],
+  "adminSecurityCode": "GDZ-8899-SEC"
+}

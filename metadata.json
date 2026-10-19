@@ -1,0 +1,6 @@
+{
+  "name": "Veritas Market – Curated Affiliate Marketplace",
+  "description": "Discover verified premium goods, artisanal lifestyle picks, and curated affiliate deals from authorized top merchants with transparent pricing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,217 @@
+import { db } from './db.js';
+
+interface NotificationPayload {
+  type: 'add_to_cart' | 'buy_now' | 'cart_merchant_click' | 'contact_form' | 'admin_alert';
+  subject: string;
+  productName?: string;
+  productId?: string;
+  price?: number;
+  quantity?: number;
+  affiliateNetwork?: string;
+  destinationHost?: string;
+  sessionId?: string;
+  productUrl?: string;
+  customerName?: string;
+  customerEmail?: string;
+  messageText?: string;
+}
+
+// In-memory throttling map to prevent notification spam
+const recentEvents = new Map<string, number>();
+const THROTTLE_WINDOW_MS = 15000; // 15 seconds per unique event key
+
+export async function dispatchEmailNotification(payload: NotificationPayload): Promise<{
+  success: boolean;
+  status: 'sent' | 'queued' | 'mock_logged' | 'failed';
+  message: string;
+}> {
+  const settings = db.getEmailSettings();
+  const recipient = settings.recipientEmail || 'editorial@veritasmarket.com';
+
+  // Check event type toggles
+  if (payload.type === 'add_to_cart' && !settings.notifyOnAddToCart) {
+    return { success: true, status: 'mock_logged', message: 'Notification disabled in settings' };
+  }
+  if (payload.type === 'buy_now' && !settings.notifyOnBuyNow) {
+    return { success: true, status: 'mock_logged', message: 'Notification disabled in settings' };
+  }
+  if (payload.type === 'cart_merchant_click' && !settings.notifyOnCartMerchantClick) {
+    return { success: true, status: 'mock_logged', message: 'Notification disabled in settings' };
+  }
+  if (payload.type === 'contact_form' && !settings.notifyOnContactMessage) {
+    return { success: true, status: 'mock_logged', message: 'Notification disabled in settings' };
+  }
+
+  // Anti-spam throttling check
+  const throttleKey = `${payload.type}_${payload.productId || ''}_${payload.sessionId || ''}`;
+  const now = Date.now();
+  const lastTime = recentEvents.get(throttleKey);
+  if (lastTime && now - lastTime < THROTTLE_WINDOW_MS) {
+    return { 
+      success: true, 
+      status: 'queued', 
+      message: 'Throttled to avoid notification flood' 
+    };
+  }
+  recentEvents.set(throttleKey, now);
+
+  const resendApiKey = process.env.RESEND_API_KEY;
+  const sendgridApiKey = process.env.SENDGRID_API_KEY;
+  const fromEmail = process.env.FROM_EMAIL || 'notifications@veritasmarket.com';
+
+  const htmlContent = `
+    <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #e5e5e5; border-radius: 8px; color: #171717;">
+      <h2 style="font-size: 18px; margin-top: 0; color: #171717; border-bottom: 2px solid #f5f5f5; padding-bottom: 12px;">
+        Veritas Market – Store Event Alert
+      </h2>
+      <p style="font-size: 14px; color: #525252; line-height: 1.5;">
+        <strong>Event:</strong> ${payload.type.toUpperCase()}<br/>
+        <strong>Timestamp:</strong> ${new Date().toUTCString()}
+      </p>
+
+      ${payload.productName ? `
+        <div style="background: #fafafa; border: 1px solid #f0f0f0; border-radius: 6px; padding: 16px; margin: 16px 0;">
+          <h3 style="margin: 0 0 8px 0; font-size: 16px;">${payload.productName}</h3>
+          <p style="margin: 4px 0; font-size: 14px; color: #525252;"><strong>Product SKU / ID:</strong> ${payload.productId || 'N/A'}</p>
+          ${payload.price !== undefined ? `<p style="margin: 4px 0; font-size: 14px; color: #525252;"><strong>Price:</strong> $${payload.price.toFixed(2)}</p>` : ''}
+          ${payload.quantity ? `<p style="margin: 4px 0; font-size: 14px; color: #525252;"><strong>Quantity:</strong> ${payload.quantity}</p>` : ''}
+          ${payload.affiliateNetwork ? `<p style="margin: 4px 0; font-size: 14px; color: #525252;"><strong>Merchant Partner:</strong> ${payload.affiliateNetwork}</p>` : ''}
+          ${payload.destinationHost ? `<p style="margin: 4px 0; font-size: 14px; color: #525252;"><strong>Destination Host:</strong> ${payload.destinationHost}</p>` : ''}
+          ${payload.productUrl ? `<p style="margin: 4px 0; font-size: 14px; color: #525252;"><strong>Catalog URL:</strong> <a href="${payload.productUrl}" style="color: #2563eb;">${payload.productUrl}</a></p>` : ''}
+        </div>
+      ` : ''}
+
+      ${payload.customerName ? `
+        <div style="background: #fafafa; border: 1px solid #f0f0f0; border-radius: 6px; padding: 16px; margin: 16px 0;">
+          <h3 style="margin: 0 0 8px 0; font-size: 15px;">Customer Inquiry</h3>
+          <p style="margin: 4px 0; font-size: 14px;"><strong>From:</strong> ${payload.customerName} (${payload.customerEmail})</p>
+          <p style="margin: 8px 0 0 0; font-size: 14px; white-space: pre-wrap; color: #333;">${payload.messageText || ''}</p>
+        </div>
+      ` : ''}
+
+      <div style="margin-top: 24px; padding-top: 12px; border-top: 1px solid #f0f0f0; font-size: 12px; color: #737373;">
+        <p style="margin: 2px 0;">Anonymous Session: ${payload.sessionId || 'anonymous'}</p>
+        <p style="margin: 2px 0;">This automated notification was generated by your Veritas Market affiliate engine.</p>
+      </div>
+    </div>
+  `;
+
+  // 1. If Resend is configured
+  if (resendApiKey) {
+    try {
+      const response = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${resendApiKey}`
+        },
+        body: JSON.stringify({
+          from: fromEmail,
+          to: recipient,
+          subject: payload.subject,
+          html: htmlContent
+        })
+      });
+
+      if (response.ok) {
+        db.recordNotificationLog({
+          type: payload.type,
+          subject: payload.subject,
+          recipient,
+          status: 'sent',
+          details: { provider: 'resend', ...payload }
+        });
+        return { success: true, status: 'sent', message: 'Email sent via Resend' };
+      } else {
+        const errorText = await response.text();
+        console.error('Resend API failed:', errorText);
+        db.recordNotificationLog({
+          type: payload.type,
+          subject: payload.subject,
+          recipient,
+          status: 'failed',
+          details: { error: errorText, ...payload }
+        });
+        return { success: false, status: 'failed', message: `Resend error: ${errorText}` };
+      }
+    } catch (err: any) {
+      console.error('Failed to dispatch via Resend:', err);
+      db.recordNotificationLog({
+        type: payload.type,
+        subject: payload.subject,
+        recipient,
+        status: 'failed',
+        details: { error: err.message, ...payload }
+      });
+      return { success: false, status: 'failed', message: err.message };
+    }
+  }
+
+  // 2. If SendGrid is configured
+  if (sendgridApiKey) {
+    try {
+      const response = await fetch('https://api.sendgrid.com/v3/mail/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${sendgridApiKey}`
+        },
+        body: JSON.stringify({
+          personalizations: [{ to: [{ email: recipient }] }],
+          from: { email: fromEmail },
+          subject: payload.subject,
+          content: [{ type: 'text/html', value: htmlContent }]
+        })
+      });
+
+      if (response.ok || response.status === 202) {
+        db.recordNotificationLog({
+          type: payload.type,
+          subject: payload.subject,
+          recipient,
+          status: 'sent',
+          details: { provider: 'sendgrid', ...payload }
+        });
+        return { success: true, status: 'sent', message: 'Email sent via SendGrid' };
+      } else {
+        const errText = await response.text();
+        db.recordNotificationLog({
+          type: payload.type,
+          subject: payload.subject,
+          recipient,
+          status: 'failed',
+          details: { error: errText, ...payload }
+        });
+        return { success: false, status: 'failed', message: `SendGrid error: ${errText}` };
+      }
+    } catch (err: any) {
+      db.recordNotificationLog({
+        type: payload.type,
+        subject: payload.subject,
+        recipient,
+        status: 'failed',
+        details: { error: err.message, ...payload }
+      });
+      return { success: false, status: 'failed', message: err.message };
+    }
+  }
+
+  // 3. No external key configured: Log faithfully to database log queue
+  // Requirement: "If email service credentials are missing, show a clear setup message in the admin dashboard rather than pretending emails were sent."
+  db.recordNotificationLog({
+    type: payload.type,
+    subject: payload.subject,
+    recipient,
+    status: 'mock_logged',
+    details: { 
+      note: 'API key not configured in environment (RESEND_API_KEY). Event saved in database notification queue for review.',
+      ...payload 
+    }
+  });
+
+  return {
+    success: true,
+    status: 'mock_logged',
+    message: 'Event logged to notification queue (RESEND_API_KEY not configured)'
+  };
+}
